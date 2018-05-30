@@ -98,7 +98,7 @@ mutual
 
 
 subQuery : SqlQueryParts ⊤
-subQuery = Select [ (INTEGER ** Column "id") ]
+subQuery = Select ((INTEGER ** Column "id") ∷ [])
 
 subQueryAst : QueryAbstractSyntaxTree
 subQueryAst = collapseToAst subQuery
